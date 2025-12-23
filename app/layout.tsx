@@ -1,10 +1,9 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import { Space_Grotesk } from 'next/font/google';
 
-export const metadata: Metadata = {
-	title: 'SpaceX Dashboard',
-	description: 'Dashboard for SpaceX launches and data',
-};
+const spaceGrotesk = Space_Grotesk({
+	subsets: ['latin'],
+	weight: ['400', '500', '700'],
+});
 
 export default function RootLayout({
 	children,
@@ -12,7 +11,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="es">
+		<html lang="en" className={spaceGrotesk.className}>
 			<body>{children}</body>
 		</html>
 	);
