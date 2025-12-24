@@ -27,7 +27,6 @@ async function fetchAPI<T>(endpoint:string): Promise<T> {
                 endpoint
             );
         }
-
         return response.json();
         
     } catch (error) {

@@ -14,6 +14,9 @@ export interface Launch{
             small:string | null;
             large:string | null;
         };
+        flickr:{
+            original:string[];
+        };
         webcast:string | null;
         article:string | null;
         wikipedia:string | null;
