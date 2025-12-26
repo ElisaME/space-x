@@ -1,5 +1,6 @@
 import LaunchesClient from '@/components/launches/launches-client';
 import { getAllLaunches, getAllLaunchpads, getAllRockets } from '@/lib/api';
+import './../globals.css';
 
 export default async function LaunchesPage() {
 	let launches, rockets, launchpads;

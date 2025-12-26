@@ -25,5 +25,5 @@ export function getLaunchImage(links: LaunchLinks): string | null {
     return links.patch.small;
   }
 
-  return null;
+  return '/placeholder.svg';
 }

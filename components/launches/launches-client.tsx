@@ -16,7 +16,22 @@ export default function LaunchesClient({
 	launchpads,
 }: LaunchClientProps) {
 	const [searchValue, setSearchValue] = useState('');
+	const [statusFilter, setStatusFilter] = useState<string>('all');
 	const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+
+	const filteredLaunches = launches.filter((launch) => {
+		// Filter by search
+		const matchesSearch =
+			launch.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+			launch.flight_number.toString() === searchValue;
+		// Filter by status
+		const matchesStatus =
+			statusFilter === 'all' ||
+			(statusFilter === 'success' && launch.success === true) ||
+			(statusFilter === 'upcoming' && launch.upcoming === true);
+		return matchesSearch && matchesStatus;
+	});
+
 	return (
 		<div className="space-y-6">
 			<div className="flex items-center gap-4">
@@ -25,13 +40,14 @@ export default function LaunchesClient({
 				</div>
 			</div>
 			<LaunchFilters
-				currentFilter="all"
+				currentFilter={statusFilter}
 				viewMode={viewMode}
-				onFilterChange={() => {}}
+				onViewModeChange={setViewMode}
+				onFilterChange={setStatusFilter}
 			/>
 			{/* Launches */}
 			<LaunchGrid
-				launches={launches}
+				launches={filteredLaunches}
 				rockets={rockets}
 				launchpads={launchpads}
 				viewMode={viewMode}

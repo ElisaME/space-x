@@ -8,11 +8,13 @@ interface LaunchFilterProps {
 	currentFilter: string;
 	onFilterChange: (filter: string) => void;
 	viewMode: 'grid' | 'list';
+	onViewModeChange: (mode: 'grid' | 'list') => void;
 }
 export function LaunchFilters({
 	currentFilter,
 	onFilterChange,
 	viewMode,
+	onViewModeChange,
 }: LaunchFilterProps) {
 	const filters = [
 		{ value: 'all', label: 'All' },
@@ -42,6 +44,7 @@ export function LaunchFilters({
 			{/* View mode */}
 			<div className="flex gap-1 bg-gray-900 border border-gray-800 rounded-lg p-1">
 				<button
+					onClick={() => onViewModeChange('grid')}
 					className={cn(
 						'rounded p-2 transition-colors',
 						viewMode === 'grid'
@@ -52,6 +55,7 @@ export function LaunchFilters({
 					<Grid className="h-4 w-4" />
 				</button>
 				<button
+					onClick={() => onViewModeChange('list')}
 					className={cn(
 						'rounded p-2 transition-colors',
 						viewMode === 'list'
