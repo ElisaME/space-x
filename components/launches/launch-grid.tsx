@@ -7,6 +7,7 @@ interface LaunchGridProps {
 	rockets: Rocket[];
 	launchpads: Launchpad[];
 	viewMode: 'grid' | 'list';
+	onLaunchClick: (launch: Launch) => void;
 }
 
 export function LaunchGrid({
@@ -14,6 +15,7 @@ export function LaunchGrid({
 	rockets,
 	launchpads,
 	viewMode,
+	onLaunchClick,
 }: LaunchGridProps) {
 	//Maps para eficientar búsqueda de referencias
 	const rocketsMap = new Map(rockets.map((r) => [r.id, r]));
@@ -44,6 +46,7 @@ export function LaunchGrid({
 						rocket={rocket}
 						launchpad={launchpad}
 						viewMode={viewMode}
+						onClick={() => onLaunchClick(launch)}
 					/>
 				);
 			})}

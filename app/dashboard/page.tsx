@@ -25,10 +25,12 @@ export default async function LaunchesPage() {
 		);
 	}
 	return (
-		<LaunchesClient
-			launches={launches}
-			rockets={rockets}
-			launchpads={launchpads}
-		/>
+		<div>
+			<LaunchesClient
+				launches={launches}
+				rockets={rockets}
+				launchpads={launchpads}
+			/>
+		</div>
 	);
 }

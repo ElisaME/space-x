@@ -23,13 +23,5 @@ export default async function LaunchesPage() {
 			</div>
 		);
 	}
-	return (
-		<div className="bg-gray-950 p-3">
-			<LaunchesClient
-				launches={launches}
-				rockets={rockets}
-				launchpads={launchpads}
-			/>
-		</div>
-	);
+	return <div className="bg-gray-950 p-3"></div>;
 }

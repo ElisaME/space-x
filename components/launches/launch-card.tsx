@@ -13,12 +13,14 @@ interface LaunchCardProps {
 	rocket?: Rocket;
 	launchpad?: Launchpad;
 	viewMode: 'grid' | 'list';
+	onClick?: () => void;
 }
 export function LaunchCard({
 	launch,
 	viewMode,
 	rocket,
 	launchpad,
+	onClick,
 }: LaunchCardProps) {
 	const imageUrl = getLaunchImage(launch.links);
 
@@ -30,8 +32,9 @@ export function LaunchCard({
 	const status = getStatus();
 	return (
 		<Card
+			onClick={onClick}
 			className={cn(
-				'group overflow-hidden border-gray-800 bg-gray-900 transition-all hover:border-gray-700 p-0',
+				'cursor-pointer group overflow-hidden border-gray-800 bg-gray-900 transition-all hover:border-gray-700 p-0',
 				viewMode === 'list' && 'flex flex-row'
 			)}
 		>
