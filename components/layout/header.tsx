@@ -12,27 +12,6 @@ export function Header() {
 						Mission Control
 					</h1>
 				</div>
-				{/* Nav */}
-				<nav className="flex items-center gap-8">
-					<Link
-						href="/"
-						className="text-sm font-medium text-blue-500 hover:text-blue-400"
-					>
-						Launches
-					</Link>
-					<Link
-						href="/vehicles"
-						className="text-sm font-medium text-blue-500 hover:text-blue-400"
-					>
-						Vehicles
-					</Link>
-					<Link
-						href="/analytics"
-						className="text-sm font-medium text-blue-500 hover:text-blue-400"
-					>
-						Analytics
-					</Link>
-				</nav>
 			</div>
 		</header>
 	);

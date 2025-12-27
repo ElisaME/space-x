@@ -8,6 +8,9 @@ export default async function LaunchesPage() {
 	let hasError = false;
 	let errorMessage = '';
 
+	//Test to see skeleton components, simulate delay
+	await new Promise((resolve) => setTimeout(resolve, 2000));
+
 	try {
 		//Get data from API
 		[launches, rockets, launchpads] = await Promise.all([

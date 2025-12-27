@@ -32,11 +32,11 @@ export function LaunchGrid({
 		<div
 			className={
 				viewMode === 'grid'
-					? 'grid sm:grid-cols-2 lg:grid-cols-3 gap-4'
+					? 'grid sm:grid-cols-2 lg:grid-cols-3 gap-5'
 					: 'space-y-4'
 			}
 		>
-			{launches.map((launch) => {
+			{launches.map((launch, index) => {
 				const rocket = rocketsMap.get(launch.rocket);
 				const launchpad = launchpadsMap.get(launch.launchpad);
 				return (
@@ -47,6 +47,7 @@ export function LaunchGrid({
 						launchpad={launchpad}
 						viewMode={viewMode}
 						onClick={() => onLaunchClick(launch)}
+						index={index}
 					/>
 				);
 			})}
