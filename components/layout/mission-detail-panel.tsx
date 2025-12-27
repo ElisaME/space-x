@@ -73,7 +73,7 @@ export function MissionDetailPanel({
 								status={getStatus()}
 								className="absolute top-4 right-4"
 							/>
-							<div className="absolute inset-0 bg-gradient-to-t from-[#161b26] to-transparent"></div>
+							<div className="absolute inset-0 bg-linear-to-t from-[#161b26] to-transparent"></div>
 							<div className="absolute -bottom-10 left-6">
 								<div className="size-20 bg-black rounded-full border-4 border-[#161b26] flex items-center justify-center overflow-hidden">
 									{launch?.links.patch.large || launch?.links.patch.small ? (

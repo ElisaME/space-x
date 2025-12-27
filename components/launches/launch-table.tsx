@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { Launch, Rocket } from '@/types';
 import {
 	Table,
@@ -33,6 +33,24 @@ export function LaunchTable({
 	itemsPerPage = 10,
 }: LaunchTableProps) {
 	const [currentPage, setCurrentPage] = useState(1);
+	const [maxVisblePages, setMaxVisblePages] = useState(5);
+
+	useEffect(() => {
+		const handleResize = () => {
+			const width = window.innerWidth;
+			if (width < 640) {
+				setMaxVisblePages(3);
+			} else if (width < 1024) {
+				setMaxVisblePages(4);
+			} else {
+				setMaxVisblePages(5);
+			}
+		};
+
+		handleResize();
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
 
 	const rocketsMap = new Map(rockets.map((r) => [r.id, r]));
 
@@ -137,7 +155,6 @@ export function LaunchTable({
 					<div className="flex gap-1">
 						{(() => {
 							const pages = [];
-							const maxVisblePages = 5;
 							let startPage = Math.max(
 								1,
 								currentPage - Math.floor(maxVisblePages / 2)
