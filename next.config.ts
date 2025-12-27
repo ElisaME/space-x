@@ -9,7 +9,8 @@ const nextConfig: NextConfig = {
         hostname: '**',
       },
     ]
-  }
+  },
+  transpilePackages:['lucide-react'],
 };
 
 export default nextConfig;
