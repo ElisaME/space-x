@@ -1,6 +1,5 @@
 import LaunchesClient from '@/components/launches/launches-client';
 import { getAllLaunches, getAllLaunchpads, getAllRockets } from '@/lib/api';
-import './globals.css';
 import ConnectionAlert from '@/components/shared/connection-alert';
 
 export default async function LaunchesPage() {

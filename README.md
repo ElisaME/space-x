@@ -30,7 +30,7 @@ Folder Structure
 
 ## Tech Stack Choices
 
-### Next.js 15 + App Router
+### Next.js + App Router
 
 - Server components by default for a better performance.
 - Built-in loading states
@@ -75,7 +75,7 @@ I used Cloud as a pair programming partner, who helped me to:
 
 - Identify SpaceX key features, to make the first TypeScript Interfaces and then there were refined manually.
 - Component Boilerplate: It gave me a suggestion for the component boilerplate and then it was edited.
-- I didn't have used the Next.js v15 yet, so it helped me to consult on Next.js patterns (server vs client compnents, loading states)
+- I didn't have used the Next.js v16 yet, so it helped me to consult on Next.js patterns (server vs client compnents, loading states)
 - I asked for feedback on architecture decisions.
 
 What I did manually:
@@ -89,7 +89,7 @@ What I did manually:
 
 - Effective prompting, for UI interface and specific tecj stack doubts.
 - Always reviewing AI outputs, as developers we can´t blindly trust in the suggested solutions.
-- Even though I have used Next.js in the past, it has been a while since I did it, so it was fun to build this project with Next.js v15.
+- Even though I have used Next.js in the past, it has been a while since I did it, so it was fun to build this project with Next.js v16.
 
 ## 3. Design decisions
 
