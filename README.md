@@ -128,3 +128,5 @@ npm run dev
 ```
 
 Open: http://localhost:3000
+
+You can also see the live demo here: https://space-x-opal.vercel.app/
