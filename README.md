@@ -71,7 +71,7 @@ Here is an image of thw work made by Stitch:
 
 ![Stitch Screen](/public/screen.png)
 
-The used of Cloud was as a pair programming partner, who helped me to:
+I used Cloud as a pair programming partner, who helped me to:
 
 - Identify SpaceX key features, to make the first TypeScript Interfaces and then there were refined manually.
 - Component Boilerplate: It gave me a suggestion for the component boilerplate and then it was edited.
